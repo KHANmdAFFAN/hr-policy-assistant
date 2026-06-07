@@ -1,0 +1,11 @@
+langchain
+langgraph
+faiss-cpu
+sentence-transformers
+pypdf
+python-docx
+tiktoken
+fastapi
+uvicorn
+streamlit
+ragas
