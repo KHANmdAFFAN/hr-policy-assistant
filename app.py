@@ -1,7 +1,6 @@
 import streamlit as st
 import os
 from pathlib import Path
-from dotenv import load_dotenv
 from langchain_community.document_loaders import UnstructuredPowerPointLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -12,8 +11,8 @@ from langchain_core.prompts import PromptTemplate
 
 ### LOADING ENVIRON VARIABLE
 
-load_dotenv()
-groq_api = os.getenv("GROQ_API_KEY")
+
+groq_api = st.secrets["GROQ_API_KEY"]
 
 ### PAGE SETTINGS
 st.set_page_config(page_title="HR ASISSTANT", page_icon ="🤖" , layout="wide")
